@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Подход — Сигнал</title>
+<meta name="description" content="Как работает агентство Сигнал: недельные циклы, решения по цифрам, отчёт в деньгах. Формат работы и команда.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="head">
+  <div class="wrap">
+    <a class="logo" href="index.html">СИГНАЛ<i>.</i></a>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="works.html">Работы</a>
+      <a href="approach.html" class="on">Подход</a>
+    </nav>
+    <a class="cta-mini" href="mailto:hi@signal.example">Обсудить проект</a>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:56px">
+  <div class="wrap">
+    <h1 style="font-size:clamp(38px,6vw,84px)">Под<span class="hollow">ход</span></h1>
+    <div class="hero-sub">
+      <p>Мы не «ведём рекламу». Мы каждую неделю отвечаем на один вопрос: сколько денег принёс каждый рубль бюджета — и что сделать, чтобы в следующую неделю ответ был лучше.</p>
+    </div>
+  </div>
+</section>
+
+<section class="blk">
+  <div class="wrap">
+    <h2>Как устроена работа</h2>
+    <div class="steps">
+      <div class="rise">
+        <h3><i>01</i>Разметка денег</h3>
+        <p>Первые две недели — не запуск, а связка рекламы с CRM и продажами. Пока путь от клика до оплаты не виден, любые «оптимизации» — гадание.</p>
+      </div>
+      <div class="rise">
+        <h3><i>02</i>Гипотезы циклами</h3>
+        <p>Каждая неделя — цикл: гипотеза, тест, цифры, решение. Связки дороже порога отключаем без жалости, работающие масштабируем.</p>
+      </div>
+      <div class="rise">
+        <h3><i>03</i>Креатив под конверсию</h3>
+        <p>Баннер и посадочная — часть воронки, а не украшение. Победителя выбирает A/B-тест по цене заявки, вкусы команды не участвуют.</p>
+      </div>
+      <div class="rise">
+        <h3><i>04</i>Отчёт в деньгах</h3>
+        <p>Раз в неделю — одна таблица: бюджет, заявки, продажи, ROMI по каналам. Без презентаций на сорок слайдов.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk">
+  <div class="wrap">
+    <h2>Кому подходим, а кому нет</h2>
+    <p class="lead">Подходим бизнесу со средним чеком от 30 тысяч и работающим отделом продаж: медицина, производство на заказ, услуги, онлайн-образование. Не подходим тем, кому нужны охваты, лайки и «присутствие в соцсетях» — это не к нам.</p>
+    <div class="nums">
+      <div class="rise"><b>2 нед</b><span>от старта до первых управляемых цифр</span></div>
+      <div class="rise"><b>1 табл</b><span>весь отчёт — деньги по каналам, раз в неделю</span></div>
+      <div class="rise"><b>0 ₽</b><span>стоимость расставания: работаем помесячно, без длинных контрактов</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="big-cta">
+  <div class="wrap">
+    <h2>Расскажите о задаче —<br>вернёмся с <span>планом</span></h2>
+    <a class="btn" href="mailto:hi@signal.example">Обсудить проект</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div><b>СИГНАЛ.</b> агентство перформанс-маркетинга</div>
+    <div>© 2026 · Работаем удалённо по всей России</div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), { threshold: 0.15 });
+document.querySelectorAll('.rise').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
