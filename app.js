@@ -75,4 +75,62 @@
     }, { threshold: 0.6 });
     document.querySelectorAll('.nums b, .work-card__nums b, .nums-side b').forEach(function (el) { cio.observe(el); });
   }
+
+  // card tilt
+  if (!reduce && matchMedia('(pointer: fine)').matches) {
+    document.querySelectorAll('.work-card').forEach(function (card) {
+      var raf = null;
+      card.addEventListener('pointermove', function (e) {
+        if (raf) return;
+        raf = requestAnimationFrame(function () {
+          var r = card.getBoundingClientRect();
+          var rx = ((e.clientY - r.top) / r.height - 0.5) * -4;
+          var ry = ((e.clientX - r.left) / r.width - 0.5) * 4;
+          card.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(-3px)';
+          raf = null;
+        });
+      });
+      card.addEventListener('pointerleave', function () {
+        card.style.transform = '';
+      });
+    });
+  }
+
+  // lead modal
+  var modal = document.getElementById('lead-modal');
+  if (modal) {
+    var lastFocus = null;
+    function openModal(e) {
+      if (e) e.preventDefault();
+      lastFocus = document.activeElement;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      var first = modal.querySelector('input');
+      if (first) first.focus();
+    }
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      if (lastFocus) lastFocus.focus();
+    }
+    document.querySelectorAll('[data-modal-open]').forEach(function (el) {
+      el.addEventListener('click', openModal);
+    });
+    modal.querySelectorAll('[data-modal-close]').forEach(function (el) {
+      el.addEventListener('click', closeModal);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+    var form = modal.querySelector('[data-lead-form]');
+    if (form) form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      modal.classList.add('sent');
+      modal.querySelector('.modal__ok').classList.add('show');
+      setTimeout(function () {
+        closeModal();
+        setTimeout(function () { modal.classList.remove('sent'); form.reset(); }, 400);
+      }, 2200);
+    });
+  }
 })();

@@ -24,7 +24,7 @@
       <a href="works.html">Работы</a>
       <a href="approach.html">Подход</a>
     </nav>
-    <a class="cta-mini" href="mailto:hi@signal.example">Обсудить проект</a>
+    <a class="cta-mini" href="#" data-modal-open>Обсудить проект</a>
   </div>
 </header>
 
@@ -68,6 +68,32 @@
   </div>
 </section>
 
+<div class="strip" aria-label="Студия в работе">
+  <div class="wrap">
+    <figure>
+      <img src="img/studio-2.jpg" alt="Разбор кампании на планёрке" loading="lazy">
+      <figcaption>Планёрка по кампаниям · вторник, 10:00</figcaption>
+    </figure>
+    <figure>
+      <img src="img/studio-1.jpg" alt="Аналитики за настройкой связок" loading="lazy">
+      <figcaption>Отдел аналитики</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="clients">
+  <div class="wrap">
+    <span class="label">Доверяют бюджет:</span>
+    <div class="marks">
+      <span>ДЕНТА-КЛИНИК</span>
+      <span>Формат Кухни</span>
+      <span>STARK FITNESS</span>
+      <span>ЮРФАКТ</span>
+      <span>Академия ПРО</span>
+    </div>
+  </div>
+</div>
+
 <section class="blk">
   <div class="wrap">
     <h2>Выбранные работы</h2>
@@ -103,19 +129,85 @@
   </div>
 </section>
 
+<section class="blk">
+  <div class="wrap">
+    <h2>Что говорят клиенты</h2>
+    <div class="tst">
+      <blockquote class="rise">
+        Пришли после трёх подрядчиков, которые показывали клики. Эти показали таблицу, где видно: вот бюджет, вот записи, вот выручка. Через месяц закрыли вопрос «работает ли реклама» навсегда.
+        <footer><b>Дмитрий, управляющий сетью клиник</b>клиент 14 месяцев</footer>
+      </blockquote>
+      <blockquote class="rise">
+        Отчёт раз в неделю на одну страницу — сначала казалось, что мало. Потом понял: в этой странице больше пользы, чем в старых презентациях на сорок слайдов.
+        <footer><b>Олег, владелец мебельного производства</b>клиент 9 месяцев</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
 <section class="big-cta">
   <div class="wrap">
     <h2>Есть бюджет —<br>сделаем из него <span>выручку</span></h2>
-    <a class="btn" href="mailto:hi@signal.example">Обсудить проект</a>
+    <a class="btn" href="#" data-modal-open>Обсудить проект</a>
   </div>
 </section>
 
 <footer class="foot">
-  <div class="wrap">
-    <div><b>СИГНАЛ.</b> агентство перформанс-маркетинга</div>
-    <div>© 2026 · Работаем удалённо по всей России</div>
+  <div class="wrap cols">
+    <div class="about-col">
+      <a class="logo" href="index.html">СИГНАЛ<i>.</i></a>
+      <p>Агентство перформанс-маркетинга. Платный трафик, сквозная аналитика и креатив, который отвечает за конверсию.</p>
+    </div>
+    <div>
+      <h4>Меню</h4>
+      <a href="index.html">Главная</a>
+      <a href="works.html">Работы</a>
+      <a href="approach.html">Подход</a>
+    </div>
+    <div>
+      <h4>Связь</h4>
+      <a href="#" data-modal-open>hi@signal.example</a>
+      <a href="#" data-modal-open>Оставить заявку</a>
+      <a>Работаем удалённо по всей России</a>
+    </div>
+  </div>
+  <div class="base">
+    <div>© 2026 <b>СИГНАЛ.</b></div>
+    <div>Показываем цифры, а не обещания</div>
   </div>
 </footer>
+
+<div class="modal" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="lm-title">
+  <div class="modal__back" data-modal-close></div>
+  <div class="modal__box">
+    <button class="modal__close" data-modal-close aria-label="Закрыть">&times;</button>
+    <h3 id="lm-title">Обсудить проект</h3>
+    <p class="sub">Расскажите о задаче — вернёмся с планом и оценкой в течение рабочего дня.</p>
+    <form data-lead-form>
+      <label>Имя</label>
+      <input type="text" name="name" required placeholder="Как к вам обращаться">
+      <label>Телефон или Telegram</label>
+      <input type="text" name="phone" required placeholder="+7 ___ ___-__-__ или @ник">
+      <label>Месячный бюджет на трафик</label>
+      <select name="budget">
+        <option>До 150 тысяч</option>
+        <option>150–500 тысяч</option>
+        <option>500 тысяч – 1,5 млн</option>
+        <option>Больше 1,5 млн</option>
+        <option>Бюджета ещё нет — нужен расчёт</option>
+      </select>
+      <label>Задача</label>
+      <textarea name="msg" placeholder="Ниша, что продаёте, что сейчас с рекламой"></textarea>
+      <button class="send" type="submit">Отправить</button>
+      <p class="fine">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
+    </form>
+    <div class="modal__ok">
+      <div class="ring">&#10003;</div>
+      <h3>Принято</h3>
+      <p class="sub">Ответим в течение рабочего дня.</p>
+    </div>
+  </div>
+</div>
 
 <script src="app.js"></script>
 </body>
