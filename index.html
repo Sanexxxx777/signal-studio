@@ -9,6 +9,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%230b0c0e%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-family=%27Arial,sans-serif%27 font-size=%2736%27 font-weight=%27800%27 fill=%27%23d6ff4b%27 text-anchor=%27middle%27%3EC%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Сигнал — агентство перформанс-маркетинга">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Сигнал — агентство перформанс-маркетинга: платный трафик, аналитика, креатив. Работаем на заявки и продажи, а не на охваты.">
 </head>
 <body>
 
@@ -26,7 +30,7 @@
 
 <section class="hero">
   <div class="wrap">
-    <h1>Трафик,<br><span class="hollow">который</span><br>прода<span class="acid">ёт</span></h1>
+    <h1><span class="line"><span>Трафик,</span></span><span class="line"><span class="hollow">который</span></span><span class="line"><span>прода<i class="acid" style="font-style:normal">ёт</i></span></span></h1>
     <div class="hero-sub">
       <p>Перформанс-агентство для бизнеса, который считает деньги: платные каналы, сквозная аналитика и креатив, отвечающий за конверсию.</p>
       <a class="btn" href="works.html">Смотреть работы</a>
@@ -113,11 +117,6 @@
   </div>
 </footer>
 
-<script>
-const io = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-}), { threshold: 0.15 });
-document.querySelectorAll('.rise').forEach(el => io.observe(el));
-</script>
+<script src="app.js"></script>
 </body>
 </html>
