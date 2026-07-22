@@ -1,28 +1,38 @@
-# Сигнал — демо-лендинг перформанс-агентства
+# Signal — demo landing for a fictional performance-marketing agency
 
-Демо-проект для портфолио: многостраничный сайт вымышленного агентства перформанс-маркетинга «СИГНАЛ». Агентство, кейсы, клиенты и отзывы — вымышленные, созданы для демонстрации вёрстки и фронтенд-навыков.
+**This is a portfolio demo — "Signal" is a fictional client**, built to showcase frontend and layout skills. The agency, case studies, clients and testimonials are all invented.
 
-**Живая версия:** https://shulgin.is-a.dev/signal-studio/
+**Live:** https://shulgin.is-a.dev/signal-studio-landing-demo/
 
-## Что показывает
+## What it shows
 
-- Многостраничная вёрстка: главная, работы, подход, отдельные страницы кейсов
-- Vanilla JS без фреймворков: stagger-анимации на IntersectionObserver, анимированные счётчики цифр, scroll-progress бар, tilt-эффект карточек по курсору, модальное окно с формой заявки
-- Адаптивная вёрстка, поддержка `prefers-reduced-motion`
-- Статический сайт, задеплоен на GitHub Pages (`.nojekyll`)
+- Multi-page layout: home, work, approach, individual case pages
+- Vanilla JS, no frameworks: IntersectionObserver stagger animations, animated number counters, scroll-progress bar, cursor tilt on cards, a request-form modal
+- Responsive layout, `prefers-reduced-motion` support
+- Static site, deployed on GitHub Pages (`.nojekyll`)
 
-## Стек
+## Stack
 
-Чистый HTML / CSS / JS, без сборки и зависимостей.
+Plain HTML / CSS / JS, no build step, no dependencies.
 
-## Запуск локально
+## Run locally
 
-Открыть `index.html` в браузере или поднять любой статик-сервер в корне репозитория:
+Open `index.html` in a browser, or serve the repo root with any static server:
 
 ```
 python3 -m http.server
 ```
 
-## Автор
+## License
 
-Aleksandr Shulgin ([Sanexxxx777](https://github.com/Sanexxxx777))
+MIT — see [LICENSE](LICENSE).
+
+## Contact
+
+Aleksandr Shulgin — [github.com/Sanexxxx777](https://github.com/Sanexxxx777)
+
+---
+
+## RU (кратко)
+
+Демо-лендинг для портфолио: многостраничный сайт **вымышленного** агентства перформанс-маркетинга «СИГНАЛ». Агентство, кейсы, клиенты и отзывы — вымышленные. Живая версия: https://shulgin.is-a.dev/signal-studio-landing-demo/
